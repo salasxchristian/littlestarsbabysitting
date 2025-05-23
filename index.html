@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Little Stars Childcare - Premium childcare services with certified professionals, educational programs, and flexible scheduling.">
     <meta name="keywords" content="childcare, daycare, babysitting, early education, child development">
-    <title>Stars Childcare - Premium Childcare Services</title>
+    <title>Little Stars Childcare - Premium Childcare Services</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -28,12 +28,15 @@
             scroll-padding-top: 70px; /* Adjust for fixed navbar */
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         .text-gradient {
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            /* Add display: inline-block for proper clipping */
             display: inline-block;
         }
 
@@ -41,7 +44,6 @@
             background: var(--gradient);
         }
 
-        /* Animated Background */
         .hero-section {
             position: relative;
             background: linear-gradient(135deg, #FFF0C1 0%, #E9F1F3 100%);
@@ -70,7 +72,6 @@
             z-index: 1;
         }
 
-        /* Navigation */
         .navbar {
             background: rgba(255, 255, 255, 0.9) !important;
             backdrop-filter: blur(10px);
@@ -94,7 +95,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -2px; /* Position slightly below */
+            bottom: -2px;
             left: 50%;
             background: var(--primary);
             transition: all 0.3s;
@@ -102,16 +103,15 @@
         }
 
         .nav-link:hover::after,
-        .nav-link.active::after { /* Add active state underline */
+        .nav-link.active::after {
             width: 70%;
         }
 
         .nav-link:hover,
-        .nav-link.active { /* Add active state color */
+        .nav-link.active {
             color: var(--primary) !important;
         }
 
-        /* Buttons */
         .btn-gradient {
             background: var(--gradient);
             color: white;
@@ -143,17 +143,20 @@
             transform: translateY(-3px);
         }
 
-        /* Cards */
         .stat-card:hover, .feature-card:hover, .service-card:hover, .contact-card:hover {
             transform: translateY(-8px);
             transition: all 0.3s ease-in-out;
+        }
+        
+        .feature-card, .service-card, .contact-card, .card.shadow-lg {
+             transition: all 0.3s ease-in-out;
         }
 
         .feature-icon {
             width: 60px;
             height: 60px;
             background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
-            font-size: 1.8rem; /* Adjusted size */
+            font-size: 1.8rem;
         }
         
         .service-header {
@@ -165,18 +168,16 @@
             font-size: 1.2rem;
         }
 
-        /* Footer */
         footer a:hover {
             color: var(--primary) !important;
             text-decoration: underline !important;
         }
 
-        /* Loading Spinner */
         #loader {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             background: white;
-            z-index: 1056; /* Higher than navbar */
+            z-index: 1056;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -191,7 +192,6 @@
             border-right-color: transparent;
         }
 
-        /* Fade-in Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(25px);
@@ -215,31 +215,19 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm py-3">
         <div class="container">
             <a class="navbar-brand text-gradient" href="#home">
-                <i class="bi bi-stars me-1"></i>Stars
+                <i class="bi bi-stars me-1"></i>Little Stars
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#services">Programs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#tuition">Tuition</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-lg-2" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="btn btn-gradient py-2 px-4" href="#contact">Enroll Now</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link mx-lg-2" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link mx-lg-2" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link mx-lg-2" href="#services">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link mx-lg-2" href="#tuition">Tuition</a></li>
+                    <li class="nav-item"><a class="nav-link mx-lg-2" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><a class="btn btn-gradient py-2 px-4" href="#contact">Enroll Now</a></li>
                 </ul>
             </div>
         </div>
@@ -250,44 +238,21 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="display-3 fw-bolder mb-3">Where <span class="text-gradient">Learning</span> Meets <span class="text-gradient">Love</span> & <span class="text-gradient">Laughter</span></h1>
-                    <p class="lead text-muted mb-4">
-                        Premium childcare services with certified professionals dedicated to nurturing your child's growth, creativity, and happiness in a safe, engaging environment.
-                    </p>
+                    <p class="lead text-muted mb-4">Premium childcare services with certified professionals dedicated to nurturing your child's growth, creativity, and happiness in a safe, engaging environment.</p>
                     <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mb-5">
                         <a href="#tuition" class="btn btn-gradient py-2 px-4 fs-6">View Tuition Rates</a>
                         <a href="#contact" class="btn btn-outline-primary py-2 px-4 fs-6">Schedule a Tour</a>
                     </div>
                     <div class="row g-3">
-                        <div class="col-4">
-                            <div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0">
-                                <div class="fs-2 fw-bold text-primary">500+</div>
-                                <p class="mb-0 text-muted small">Happy Families</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0">
-                                <div class="fs-2 fw-bold text-primary">4.9 <i class="bi bi-star-fill text-warning"></i></div>
-                                <p class="mb-0 text-muted small">Parent Rating</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                           <div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0">
-                                <div class="fs-2 fw-bold text-primary">24/7</div>
-                                <p class="mb-0 text-muted small">Available</p>
-                           </div>
-                        </div>
+                        <div class="col-4"><div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0"><div class="fs-2 fw-bold text-primary">500+</div><p class="mb-0 text-muted small">Happy Families</p></div></div>
+                        <div class="col-4"><div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0"><div class="fs-2 fw-bold text-primary">4.9 <i class="bi bi-star-fill text-warning"></i></div><p class="mb-0 text-muted small">Parent Rating</p></div></div>
+                        <div class="col-4"><div class="stat-card card text-center p-3 rounded-4 shadow-sm h-100 border-0"><div class="fs-2 fw-bold text-primary">24/7</div><p class="mb-0 text-muted small">Available</p></div></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&fit=crop&q=80" 
-                             alt="Happy children playing with educational toys" 
-                             class="img-fluid rounded-4 shadow-lg w-100">
-                        <div class="position-absolute top-0 end-0 m-3 m-lg-4">
-                            <span class="badge bg-white text-primary p-3 rounded-3 shadow-sm fs-6">
-                                <i class="bi bi-shield-check me-2"></i>Licensed & Insured
-                            </span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&h=600&fit=crop&q=80" alt="Happy children playing with educational toys" class="img-fluid rounded-4 shadow-lg w-100">
+                        <div class="position-absolute top-0 end-0 m-3 m-lg-4"><span class="badge bg-white text-primary p-3 rounded-3 shadow-sm fs-6"><i class="bi bi-shield-check me-2"></i>Licensed & Insured</span></div>
                     </div>
                 </div>
             </div>
@@ -299,42 +264,16 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
                     <h2 class="display-4 fw-bold mb-4">Why Choose <span class="text-gradient">Little Stars?</span></h2>
-                    <p class="lead text-muted mb-4">
-                        With over 10 years of excellence, we provide a nurturing, play-based environment where children thrive with individualized attention.
-                    </p>
+                    <p class="lead text-muted mb-4">With over 10 years of excellence, we provide a nurturing, play-based environment where children thrive with individualized attention.</p>
                     <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center bg-light p-3 rounded-3">
-                                <i class="bi bi-patch-check-fill text-success fs-3 me-3"></i>
-                                <span>Licensed Facility</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center bg-light p-3 rounded-3">
-                                <i class="bi bi-mortarboard-fill text-success fs-3 me-3"></i>
-                                <span>Certified Teachers</span>
-                            </div>
-                        </div>
-                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center bg-light p-3 rounded-3">
-                                <i class="bi bi-people-fill text-success fs-3 me-3"></i>
-                                <span>Low Student Ratio</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="d-flex align-items-center bg-light p-3 rounded-3">
-                                <i class="bi bi-lightbulb-fill text-success fs-3 me-3"></i>
-                                <span>STEM Programs</span>
-                            </div>
-                        </div>
+                        <div class="col-sm-6"><div class="d-flex align-items-center bg-light p-3 rounded-3"><i class="bi bi-patch-check-fill text-success fs-3 me-3"></i><span>Licensed Facility</span></div></div>
+                        <div class="col-sm-6"><div class="d-flex align-items-center bg-light p-3 rounded-3"><i class="bi bi-mortarboard-fill text-success fs-3 me-3"></i><span>Certified Teachers</span></div></div>
+                        <div class="col-sm-6"><div class="d-flex align-items-center bg-light p-3 rounded-3"><i class="bi bi-people-fill text-success fs-3 me-3"></i><span>Low Student Ratio</span></div></div>
+                        <div class="col-sm-6"><div class="d-flex align-items-center bg-light p-3 rounded-3"><i class="bi bi-lightbulb-fill text-success fs-3 me-3"></i><span>STEM Programs</span></div></div>
                     </div>
                     <a href="#services" class="btn btn-outline-primary py-2 px-4">Explore Our Programs</a>
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&h=500&fit=crop&q=80" 
-                         alt="Teacher interacting with children in a classroom" 
-                         class="img-fluid rounded-4 shadow-lg w-100">
-                </div>
+                <div class="col-lg-6 order-lg-1"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&h=500&fit=crop&q=80" alt="Teacher interacting with children in a classroom" class="img-fluid rounded-4 shadow-lg w-100"></div>
             </div>
         </div>
     </section>
@@ -346,60 +285,12 @@
                 <p class="lead text-muted">Comprehensive care and education tailored to every age group.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                            <i class="bi bi-heart-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Infant Care</h3>
-                        <p class="text-muted small">Nurturing care for babies 6 weeks to 18 months with individualized schedules and developmental activities.</p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                            <i class="bi bi-puzzle-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Toddler Program</h3>
-                        <p class="text-muted small">Engaging activities for 18 months to 3 years focusing on language, motor skills, and social development.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                           <i class="bi bi-book-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Preschool</h3>
-                        <p class="text-muted small">Kindergarten readiness program for ages 3-5 with structured learning, arts, and STEM activities.</p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                            <i class="bi bi-backpack-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">After School</h3>
-                        <p class="text-muted small">Homework help, enrichment activities, and safe supervision for school-age children up to 12 years.</p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                           <i class="bi bi-sun-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Summer Camp</h3>
-                        <p class="text-muted small">Fun-filled summer programs with weekly themes, field trips, and outdoor adventures.</p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0">
-                        <div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3">
-                           <i class="bi bi-moon-stars-fill text-gradient"></i>
-                        </div>
-                        <h3 class="h5 fw-semibold mb-3">Extended Hours</h3>
-                        <p class="text-muted small">Flexible scheduling with early drop-off and late pickup options for working parents.</p>
-                    </div>
-                </div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-heart-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">Infant Care</h3><p class="text-muted small">Nurturing care for babies 6 weeks to 18 months with individualized schedules and developmental activities.</p></div></div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-puzzle-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">Toddler Program</h3><p class="text-muted small">Engaging activities for 18 months to 3 years focusing on language, motor skills, and social development.</p></div></div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-book-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">Preschool</h3><p class="text-muted small">Kindergarten readiness program for ages 3-5 with structured learning, arts, and STEM activities.</p></div></div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-backpack-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">After School</h3><p class="text-muted small">Homework help, enrichment activities, and safe supervision for school-age children up to 12 years.</p></div></div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-sun-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">Summer Camp</h3><p class="text-muted small">Fun-filled summer programs with weekly themes, field trips, and outdoor adventures.</p></div></div>
+                <div class="col-lg-4 col-md-6 fade-in"><div class="feature-card card text-center p-4 rounded-4 shadow-sm h-100 border-0"><div class="feature-icon d-flex align-items-center justify-content-center rounded-3 mx-auto mb-3"><i class="bi bi-moon-stars-fill text-gradient"></i></div><h3 class="h5 fw-semibold mb-3">Extended Hours</h3><p class="text-muted small">Flexible scheduling with early drop-off and late pickup options for working parents.</p></div></div>
             </div>
         </div>
     </section>
@@ -411,89 +302,12 @@
                 <p class="lead text-muted">Transparent pricing with flexible options to suit your needs.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-3 col-md-6 fade-in">
-                    <div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center">
-                        <div class="service-header text-white p-4">
-                            <h4 class="h5 fw-semibold">Infant Care</h4>
-                            <p class="display-5 fw-bold mb-0">$350</p>
-                            <p class="small opacity-75">per week</p>
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <ul class="service-features list-unstyled text-start mb-4 flex-grow-1">
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 6 weeks - 18 months</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:4 teacher ratio</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Individual schedules</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Daily reports</li>
-                                <li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> All meals included</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 fade-in">
-                    <div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center">
-                        <div class="service-header text-white p-4">
-                            <h4 class="h5 fw-semibold">Toddler Program</h4>
-                            <p class="display-5 fw-bold mb-0">$300</p>
-                            <p class="small opacity-75">per week</p>
-                        </div>
-                         <div class="card-body p-4 d-flex flex-column">
-                            <ul class="service-features list-unstyled text-start mb-4 flex-grow-1">
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 18 months - 3 years</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:6 teacher ratio</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Potty training aid</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Music & movement</li>
-                                <li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Healthy snacks</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-md-6 fade-in">
-                    <div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center">
-                        <div class="service-header text-white p-4">
-                            <h4 class="h5 fw-semibold">Preschool</h4>
-                            <p class="display-5 fw-bold mb-0">$275</p>
-                            <p class="small opacity-75">per week</p>
-                        </div>
-                         <div class="card-body p-4 d-flex flex-column">
-                            <ul class="service-features list-unstyled text-start mb-4 flex-grow-1">
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Ages 3-5 years</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:10 teacher ratio</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Pre-K curriculum</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> STEM activities</li>
-                                <li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Field trips</li>
-                            </ul>
-                             <a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-md-6 fade-in">
-                    <div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center">
-                        <div class="service-header text-white p-4">
-                            <h4 class="h5 fw-semibold">After School</h4>
-                            <p class="display-5 fw-bold mb-0">$175</p>
-                            <p class="small opacity-75">per week</p>
-                        </div>
-                         <div class="card-body p-4 d-flex flex-column">
-                            <ul class="service-features list-unstyled text-start mb-4 flex-grow-1">
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Ages 5-12 years</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Homework help</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Transportation</li>
-                                <li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Enrichment clubs</li>
-                                <li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Afternoon snack</li>
-                            </ul>
-                            <a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-lg-3 col-md-6 fade-in"><div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center"><div class="service-header text-white p-4"><h4 class="h5 fw-semibold">Infant Care</h4><p class="display-5 fw-bold mb-0">$350</p><p class="small opacity-75">per week</p></div><div class="card-body p-4 d-flex flex-column"><ul class="service-features list-unstyled text-start mb-4 flex-grow-1"><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 6 weeks - 18 months</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:4 teacher ratio</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Individual schedules</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Daily reports</li><li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> All meals included</li></ul><a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a></div></div></div>
+                <div class="col-lg-3 col-md-6 fade-in"><div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center"><div class="service-header text-white p-4"><h4 class="h5 fw-semibold">Toddler Program</h4><p class="display-5 fw-bold mb-0">$300</p><p class="small opacity-75">per week</p></div><div class="card-body p-4 d-flex flex-column"><ul class="service-features list-unstyled text-start mb-4 flex-grow-1"><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 18 months - 3 years</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:6 teacher ratio</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Potty training aid</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Music & movement</li><li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Healthy snacks</li></ul><a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a></div></div></div>
+                <div class="col-lg-3 col-md-6 fade-in"><div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center"><div class="service-header text-white p-4"><h4 class="h5 fw-semibold">Preschool</h4><p class="display-5 fw-bold mb-0">$275</p><p class="small opacity-75">per week</p></div><div class="card-body p-4 d-flex flex-column"><ul class="service-features list-unstyled text-start mb-4 flex-grow-1"><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Ages 3-5 years</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> 1:10 teacher ratio</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Pre-K curriculum</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> STEM activities</li><li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Field trips</li></ul><a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a></div></div></div>
+                <div class="col-lg-3 col-md-6 fade-in"><div class="service-card card shadow border-0 rounded-4 h-100 overflow-hidden text-center"><div class="service-header text-white p-4"><h4 class="h5 fw-semibold">After School</h4><p class="display-5 fw-bold mb-0">$175</p><p class="small opacity-75">per week</p></div><div class="card-body p-4 d-flex flex-column"><ul class="service-features list-unstyled text-start mb-4 flex-grow-1"><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Ages 5-12 years</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Homework help</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Transportation</li><li class="py-2 border-bottom d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Enrichment clubs</li><li class="py-2 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Afternoon snack</li></ul><a href="#contact" class="btn btn-gradient w-100 py-2 mt-auto">Enroll Now</a></div></div></div>
             </div>
-             <div class="text-center mt-5 text-muted small">
-                <p>
-                    <i class="bi bi-info-circle me-1"></i>
-                    Registration fee: $150 (one-time) | Sibling discount: 10% | Financial assistance may be available.
-                </p>
-            </div>
+            <div class="text-center mt-5 text-muted small"><p><i class="bi bi-info-circle me-1"></i>Registration fee: $150 (one-time) | Sibling discount: 10% | Financial assistance may be available.</p></div>
         </div>
     </section>
 
@@ -504,75 +318,62 @@
                 <p class="lead text-muted">We'd love to hear from you! Schedule a tour today.</p>
             </div>
             <div class="row g-4 mb-5">
-                <div class="col-lg-4 fade-in">
-                    <div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm">
-                        <div class="fs-1 text-gradient mb-3">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <h4 class="h5 fw-semibold">Visit Us</h4>
-                        <p class="mb-0 text-muted">123 Sunshine Lane<br>Happy Valley, CA 90210</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm">
-                        <div class="fs-1 text-gradient mb-3">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <h4 class="h5 fw-semibold">Call Us</h4>
-                        <p class="mb-0 text-muted">(555) 123-4567<br>Mon-Fri: 6:30 AM - 6:30 PM</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 fade-in">
-                    <div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm">
-                         <div class="fs-1 text-gradient mb-3">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <h4 class="h5 fw-semibold">Email Us</h4>
-                        <p class="mb-0 text-muted">info@littlestars.com<br>enroll@littlestars.com</p>
-                    </div>
-                </div>
+                <div class="col-lg-4 fade-in"><div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm"><div class="fs-1 text-gradient mb-3"><i class="bi bi-geo-alt-fill"></i></div><h4 class="h5 fw-semibold">Visit Us</h4><p class="mb-0 text-muted">123 Sunshine Lane<br>Happy Valley, CA 90210</p></div></div>
+                <div class="col-lg-4 fade-in"><div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm"><div class="fs-1 text-gradient mb-3"><i class="bi bi-telephone-fill"></i></div><h4 class="h5 fw-semibold">Call Us</h4><p class="mb-0 text-muted">(555) 123-4567<br>Mon-Fri: 6:30 AM - 6:30 PM</p></div></div>
+                <div class="col-lg-4 fade-in"><div class="contact-card card p-4 text-center h-100 border-0 rounded-4 shadow-sm"><div class="fs-1 text-gradient mb-3"><i class="bi bi-envelope-fill"></i></div><h4 class="h5 fw-semibold">Email Us</h4><p class="mb-0 text-muted">info@littlestars.com<br>enroll@littlestars.com</p></div></div>
             </div>
             <div class="row fade-in">
                 <div class="col-lg-8 mx-auto">
                     <div class="card shadow-lg border-0 rounded-4">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="text-center mb-4 fw-semibold">Schedule a Tour or Ask a Question</h3>
-                            <form id="contactForm" class="needs-validation" novalidate>
+                            <form 
+                                name="tourRequest" 
+                                method="POST" 
+                                data-netlify="true" 
+                                data-netlify-recaptcha="true" 
+                                id="contactForm" 
+                                class="needs-validation" 
+                                novalidate
+                                action="/thank-you/" >
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="parentName" class="form-label">Parent Name</label>
-                                        <input type="text" class="form-control form-control-lg" id="parentName" required>
+                                        <input type="text" class="form-control form-control-lg" id="parentName" name="parentName" required>
                                         <div class="invalid-feedback">Please enter your name.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="phoneNumber" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control form-control-lg" id="phoneNumber" required>
-                                         <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                        <input type="tel" class="form-control form-control-lg" id="phoneNumber" name="phone" required>
+                                        <div class="invalid-feedback">Please enter a valid phone number.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="emailAddress" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control form-control-lg" id="emailAddress" required>
+                                        <input type="email" class="form-control form-control-lg" id="emailAddress" name="email" required>
                                         <div class="invalid-feedback">Please enter a valid email address.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="childAge" class="form-label">Child's Age Group</label>
-                                        <select class="form-select form-select-lg" id="childAge" required>
+                                        <select class="form-select form-select-lg" id="childAge" name="childAge" required>
                                             <option value="" selected disabled>Select...</option>
-                                            <option>6 weeks - 18 months</option>
-                                            <option>18 months - 3 years</option>
-                                            <option>3 - 5 years</option>
-                                            <option>5 - 12 years</option>
+                                            <option value="infant">6 weeks - 18 months</option>
+                                            <option value="toddler">18 months - 3 years</option>
+                                            <option value="preschool">3 - 5 years</option>
+                                            <option value="afterschool">5 - 12 years</option>
                                         </select>
                                         <div class="invalid-feedback">Please select an age group.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="tourDate" class="form-label">Preferred Tour Date</label>
-                                        <input type="date" class="form-control form-control-lg" id="tourDate" required>
+                                        <input type="date" class="form-control form-control-lg" id="tourDate" name="tourDate" required>
                                         <div class="invalid-feedback">Please select a date.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label">Message (Optional)</label>
-                                        <textarea class="form-control form-control-lg" id="message" rows="3" placeholder="Tell us about your needs or ask a question..."></textarea>
+                                        <textarea class="form-control form-control-lg" id="message" name="message" rows="3" placeholder="Tell us about your needs or ask a question..."></textarea>
+                                    </div>
+                                    <div class="col-12 my-3">
+                                        <div data-netlify-recaptcha="true"></div>
                                     </div>
                                     <div class="col-12 text-center mt-4">
                                         <button type="submit" class="btn btn-gradient btn-lg px-5 py-2">
@@ -591,78 +392,29 @@
     <footer class="text-center text-lg-start bg-dark text-white py-4">
         <div class="container py-4">
             <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-gradient mb-3 h4"><i class="bi bi-stars me-1"></i>Little Stars</h5>
-                    <p class="text-white-50 small">Nurturing young minds with love, learning, and laughter since 2014.</p>
-                    <div class="d-flex gap-3 fs-4 mt-3">
-                        <a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white-50"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="mb-3 text-white">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none small">Home</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none small">About Us</a></li>
-                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none small">Programs</a></li>
-                        <li class="mb-2"><a href="#tuition" class="text-white-50 text-decoration-none small">Tuition</a></li>
-                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none small">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                     <h5 class="mb-3 text-white">Resources</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Parent Handbook</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Enrollment Forms</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">FAQs</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Blog</a></li>
-                    </ul>
-                </div>
-                 <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-3 text-white">Contact Info</h5>
-                     <ul class="list-unstyled text-white-50 small">
-                         <li class="mb-2 d-flex"><i class="bi bi-geo-alt-fill me-2 mt-1"></i> 123 Sunshine Ln, Happy Valley, CA</li>
-                         <li class="mb-2 d-flex"><i class="bi bi-telephone-fill me-2 mt-1"></i> (555) 123-4567</li>
-                         <li class="mb-2 d-flex"><i class="bi bi-envelope-fill me-2 mt-1"></i> info@littlestars.com</li>
-                     </ul>
-                </div>
+                <div class="col-lg-4 col-md-6"><h5 class="text-gradient mb-3 h4"><i class="bi bi-stars me-1"></i>Little Stars</h5><p class="text-white-50 small">Nurturing young minds with love, learning, and laughter since 2014.</p><div class="d-flex gap-3 fs-4 mt-3"><a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a><a href="#" class="text-white-50"><i class="bi bi-instagram"></i></a><a href="#" class="text-white-50"><i class="bi bi-twitter-x"></i></a></div></div>
+                <div class="col-lg-2 col-md-6"><h5 class="mb-3 text-white">Quick Links</h5><ul class="list-unstyled"><li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none small">Home</a></li><li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none small">About Us</a></li><li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none small">Programs</a></li><li class="mb-2"><a href="#tuition" class="text-white-50 text-decoration-none small">Tuition</a></li><li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none small">Contact</a></li></ul></div>
+                <div class="col-lg-3 col-md-6"><h5 class="mb-3 text-white">Resources</h5><ul class="list-unstyled"><li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Parent Handbook</a></li><li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Enrollment Forms</a></li><li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">FAQs</a></li><li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small">Blog</a></li></ul></div>
+                <div class="col-lg-3 col-md-6"><h5 class="mb-3 text-white">Contact Info</h5><ul class="list-unstyled text-white-50 small"><li class="mb-2 d-flex"><i class="bi bi-geo-alt-fill me-2 mt-1"></i> 123 Sunshine Ln, Happy Valley, CA</li><li class="mb-2 d-flex"><i class="bi bi-telephone-fill me-2 mt-1"></i> (555) 123-4567</li><li class="mb-2 d-flex"><i class="bi bi-envelope-fill me-2 mt-1"></i> info@littlestars.com</li></ul></div>
             </div>
             <hr class="my-4 border-white-50">
-            <div class="text-center text-white-50 small">
-                &copy; <span id="currentYear"></span> Little Stars Childcare. All Rights Reserved. | <a href="#" class="text-white-50">Privacy Policy</a>
-            </div>
+            <div class="text-center text-white-50 small">&copy; <span id="currentYear"></span> Little Stars Childcare. All Rights Reserved. | <a href="#" class="text-white-50">Privacy Policy</a></div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script>
-        // Smooth scroll polyfill for older browsers (optional, BS5 handles much of this)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                // Prevent default if it's not a BS component link
-                if(this.hash !== "" && !this.getAttribute('data-bs-toggle')) {
-                    e.preventDefault();
-                    document.querySelector(this.hash).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
         // Loading Spinner
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             if (loader) {
                 loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 500); // Match transition duration
+                setTimeout(() => { loader.style.display = 'none'; }, 500);
             }
         });
 
-        // Form Validation
+        // Bootstrap Form Validation (Stays client-side)
         (() => {
             'use strict'
             const forms = document.querySelectorAll('.needs-validation')
@@ -682,45 +434,38 @@
 
         // Fade-in elements on scroll
         const fadeInElements = document.querySelectorAll('.fade-in');
-        const observerOptions = {
-            root: null, // relative to the viewport
-            rootMargin: '0px',
-            threshold: 0.1 // 10% visible
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Optional: stop observing once visible
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
-
-        fadeInElements.forEach(el => {
-            observer.observe(el);
-        });
+        }, { threshold: 0.1 });
+        fadeInElements.forEach(el => observer.observe(el));
 
         // Navbar Active Link Highlighting
         const navLinks = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
-
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                if (pageYOffset >= (sectionTop - 80)) { // Adjusted offset
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
                     link.classList.add('active');
                 }
             });
+             // Ensure home is active when at the very top
+            if (window.pageYOffset < 200) {
+                 navLinks.forEach(link => link.classList.remove('active'));
+                 document.querySelector('.nav-link[href="#home"]').classList.add('active');
+            }
         });
 
     </script>
